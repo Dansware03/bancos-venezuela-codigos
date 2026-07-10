@@ -1,0 +1,166 @@
+/* Custom styles — Tailwind handles layout & utilities */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Hero gradient mesh */
+.hero-mesh {
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(at 20% 30%, rgba(59, 130, 246, 0.18) 0, transparent 50%),
+    radial-gradient(at 80% 20%, rgba(234, 179, 8, 0.12) 0, transparent 45%),
+    radial-gradient(at 60% 80%, rgba(239, 68, 68, 0.1) 0, transparent 45%);
+}
+
+/* Subtle grid overlay */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Code blocks */
+pre code {
+  tab-size: 2;
+}
+
+.code-block {
+  padding: 1rem !important;
+  margin: 0 !important;
+  overflow-x: hidden;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background: #0f172a !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.code-block code {
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  text-shadow: none;
+  white-space: pre-wrap !important;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Prism — ajustes al tema oscuro del sitio */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #64748b;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #94a3b8;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol {
+  color: #f472b6;
+}
+
+.token.boolean,
+.token.number {
+  color: #fb923c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: #86efac;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #67e8f9;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #93c5fd;
+}
+
+.token.keyword {
+  color: #c4b5fd;
+}
+
+.token.regex,
+.token.important {
+  color: #fcd34d;
+}
+
+/* Table row hover */
+.bank-row {
+  transition: background-color 0.15s ease;
+}
+
+.bank-row:hover {
+  background-color: rgba(59, 130, 246, 0.06);
+}
+
+/* Venezuela flag — keep 3:2 aspect ratio */
+.flag-icon {
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Bank logo in table */
+.bank-logo {
+  object-fit: contain;
+  background: #fff;
+}
+
+/* Fade-in on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Copy button feedback */
+.copy-btn.copied {
+  color: #4ade80;
+}
+
+/* Scrollbar (webkit) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

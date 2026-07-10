@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venezuelan Banks · Bancos de Venezuela | Códigos bancarios y logos JSON</title>
+  <meta name="description" content="Catálogo de bancos de Venezuela con códigos bancarios de 4 dígitos, RIF y logos en JSON. Recurso abierto para apps de pagos, pago móvil, transferencias y validación de cuentas." />
+  <meta name="keywords" content="bancos venezuela, codigos bancarios, venezuelan banks, pago movil, rif bancos, logos bancos venezuela, json bancos, transferencias venezuela, fintech venezuela" />
+  <meta name="author" content="Alfonzzoj" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://alfonzzoj.github.io/bancos-venezuela-codigos/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_VE" />
+  <meta property="og:site_name" content="Venezuelan Banks" />
+  <meta property="og:title" content="Venezuelan Banks · Bancos de Venezuela" />
+  <meta property="og:description" content="Códigos bancarios, RIF y logos de los 27 bancos de Venezuela en JSON. Recurso de apoyo para desarrolladores." />
+  <meta property="og:url" content="https://alfonzzoj.github.io/bancos-venezuela-codigos/" />
+  <meta property="og:image" content="https://alfonzzoj.github.io/bancos-venezuela-codigos/assets/venezuela-flag.png" />
+  <meta property="og:image:alt" content="Bandera de Venezuela" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Venezuelan Banks · Bancos de Venezuela" />
+  <meta name="twitter:description" content="Códigos bancarios, RIF y logos de los 27 bancos de Venezuela en JSON." />
+  <meta name="twitter:image" content="https://alfonzzoj.github.io/bancos-venezuela-codigos/assets/venezuela-flag.png" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Venezuelan Banks",
+        "alternateName": "Bancos de Venezuela",
+        "url": "https://alfonzzoj.github.io/bancos-venezuela-codigos/",
+        "description": "Catálogo de bancos de Venezuela con códigos bancarios, RIF y logos en JSON.",
+        "inLanguage": "es-VE"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Catálogo de bancos de Venezuela",
+        "description": "Datos estructurados de 27 bancos venezolanos: código de 4 dígitos, nombre oficial, RIF y archivo de logo.",
+        "url": "https://github.com/Alfonzzoj/bancos-venezuela-codigos",
+        "keywords": ["bancos venezuela", "codigos bancarios", "rif", "logos bancarios"],
+        "creator": {
+          "@type": "Organization",
+          "name": "Alfonzzoj",
+          "url": "https://github.com/Alfonzzoj"
+        },
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://raw.githubusercontent.com/Alfonzzoj/bancos-venezuela-codigos/main/bancos.json"
+        },
+        "temporalCoverage": "2026",
+        "dateModified": "2026-07-10"
+      }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <link rel="icon" href="assets/venezuela-flag.png" type="image/png" />
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+      <a href="#" class="flex items-center gap-2 font-semibold text-white">
+        <img src="assets/venezuela-flag.png" alt="Bandera de Venezuela" class="flag-icon h-7 w-10 rounded-sm object-cover shadow-sm" />
+        <span class="hidden sm:inline">Venezuelan Banks</span>
+      </a>
+      <div id="nav-menu-desktop" class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#estructura" class="hover:text-white transition">Estructura</a>
+        <a href="#campos" class="hover:text-white transition">Campos</a>
+        <a href="#bancos" class="hover:text-white transition">Bancos</a>
+        <a href="#uso" class="hover:text-white transition">Uso</a>
+        <a href="#colabora" class="hover:text-white transition">Colabora</a>
+        <a href="#actualizado" class="hover:text-white transition">Mantener al día</a>
+        <a
+          href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-1.5 bg-white text-slate-900 px-3 py-1.5 rounded-lg font-medium hover:bg-slate-100 transition"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <button id="nav-toggle" class="md:hidden p-2 text-slate-300" aria-label="Menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="nav-menu-mobile" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-slate-700/50 bg-slate-900/95">
+      <a href="#estructura" class="text-sm text-slate-300 py-1">Estructura</a>
+      <a href="#campos" class="text-sm text-slate-300 py-1">Campos</a>
+      <a href="#bancos" class="text-sm text-slate-300 py-1">Bancos</a>
+      <a href="#uso" class="text-sm text-slate-300 py-1">Uso</a>
+      <a href="#colabora" class="text-sm text-slate-300 py-1">Colabora</a>
+      <a href="#actualizado" class="text-sm text-slate-300 py-1">Mantener al día</a>
+      <a href="https://github.com/Alfonzzoj/bancos-venezuela-codigos" target="_blank" rel="noopener" class="text-sm text-blue-400 py-1">GitHub →</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-mesh grid-overlay min-h-screen flex items-center pt-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Venezuelan Banks
+            <span class="block text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-400 mt-2">Bancos de Venezuela</span>
+          </h1>
+          <p class="text-lg text-slate-300 leading-relaxed mb-4">
+            Catálogo de <strong class="text-white">bancos de Venezuela</strong> con
+            <strong class="text-white">códigos bancarios</strong>, RIF y logos en JSON.
+            Códigos de 4 dígitos para transferencias, <strong class="text-white">pago móvil</strong> y validación de cuentas.
+          </p>
+          <p class="text-slate-400 mb-8">
+            Recurso de apoyo para apps de pagos, P2P, transferencias, validadores y fintech venezolana.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-600/25"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Ver repositorio
+            </a>
+            <a
+              href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white px-6 py-3 rounded-xl font-semibold transition"
+            >
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Deja una estrella
+            </a>
+          </div>
+          <div class="mt-4">
+            <p class="text-sm text-slate-500 mb-2">
+              Última actualización: <span data-last-updated>…</span>
+            </p>
+            <a href="#bancos" class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-medium transition">
+              Explorar bancos ↓
+            </a>
+          </div>
+        </div>
+        <div class="relative hidden lg:block">
+          <div class="absolute -inset-4 bg-gradient-to-br from-blue-600/20 via-yellow-500/10 to-red-500/10 rounded-3xl blur-2xl"></div>
+          <div class="relative bg-slate-800/60 border border-slate-700 rounded-2xl p-6 backdrop-blur">
+            <div class="flex items-center gap-3 mb-4">
+              <img src="assets/venezuela-flag.png" alt="Bandera de Venezuela" class="flag-icon h-10 w-14 rounded-sm object-cover shadow-md" />
+              <div>
+                <p class="font-mono text-blue-400 text-sm">bancos.json</p>
+                <p class="font-semibold text-white">Bancos de Venezuela</p>
+              </div>
+            </div>
+            <pre class="bg-slate-900 rounded-xl p-4 text-sm font-mono text-slate-300 overflow-x-auto"><code>{
+  "codigo": "0102",
+  "nombre": "Banco de Venezuela...",
+  "rif": "G200099976",
+  "filename": "bdv.png"
+}</code></pre>
+            <p class="text-xs text-slate-500 mt-3 text-center">bancos.json · listo para importar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <!-- Estructura -->
+    <section id="estructura" class="py-20 reveal">
+      <h2 class="text-3xl font-bold text-white mb-3">Estructura del proyecto</h2>
+      <p class="text-slate-400 mb-8">Todo lo que necesitas en un solo repositorio.</p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
+          <p class="font-mono text-blue-400 text-sm mb-2">bancos.json</p>
+          <p class="text-slate-300 text-sm">Datos de cada banco: código, nombre, RIF y archivo de logo.</p>
+        </div>
+        <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
+          <p class="font-mono text-blue-400 text-sm mb-2">images/</p>
+          <p class="text-slate-300 text-sm">Logos en PNG asociados por el campo <code class="text-yellow-300/80">filename</code>.</p>
+        </div>
+      </div>
+      <pre class="mt-6 bg-slate-800/80 border border-slate-700 rounded-xl p-5 text-sm font-mono text-slate-300 overflow-x-auto"><code>.
+├── bancos.json
+├── images/
+│   ├── bdv.png
+│   ├── banesco.png
+│   └── ...
+└── web/
+    ├── index.html
+    ├── json/meta.json
+    ├── css/styles.css
+    ├── js/main.js
+    └── assets/venezuela-flag.png</code></pre>
+    </section>
+
+    <!-- Campos -->
+    <section id="campos" class="py-20 reveal">
+      <h2 class="text-3xl font-bold text-white mb-3">Campos del JSON</h2>
+      <p class="text-slate-400 mb-8">Esquema simple y directo para cualquier integración.</p>
+      <div class="overflow-x-auto rounded-xl border border-slate-700">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-slate-800 text-left text-slate-300">
+              <th class="px-5 py-3 font-semibold">Campo</th>
+              <th class="px-5 py-3 font-semibold">Tipo</th>
+              <th class="px-5 py-3 font-semibold">Descripción</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700/50">
+            <tr class="bg-slate-800/30">
+              <td class="px-5 py-3 font-mono text-blue-400">codigo</td>
+              <td class="px-5 py-3 text-slate-400">string</td>
+              <td class="px-5 py-3 text-slate-300">Código de 4 dígitos del banco (ej. <code class="text-yellow-300/80">"0102"</code>)</td>
+            </tr>
+            <tr class="bg-slate-800/30">
+              <td class="px-5 py-3 font-mono text-blue-400">nombre</td>
+              <td class="px-5 py-3 text-slate-400">string</td>
+              <td class="px-5 py-3 text-slate-300">Nombre oficial del banco</td>
+            </tr>
+            <tr class="bg-slate-800/30">
+              <td class="px-5 py-3 font-mono text-blue-400">rif</td>
+              <td class="px-5 py-3 text-slate-400">string</td>
+              <td class="px-5 py-3 text-slate-300">RIF del banco</td>
+            </tr>
+            <tr class="bg-slate-800/30">
+              <td class="px-5 py-3 font-mono text-blue-400">filename</td>
+              <td class="px-5 py-3 text-slate-400">string</td>
+              <td class="px-5 py-3 text-slate-300">Nombre del archivo de logo en <code class="text-yellow-300/80">images/</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Bancos -->
+    <section id="bancos" class="py-20 reveal">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-2">Bancos</h2>
+          <p id="bank-count" class="text-slate-400 text-sm">Cargando...</p>
+        </div>
+        <input
+          id="bank-search"
+          type="search"
+          placeholder="Buscar por código, nombre o RIF..."
+          class="bg-slate-800 border border-slate-600 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-72"
+        />
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-slate-700">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-slate-800 text-left text-slate-300">
+              <th class="px-4 py-3 font-semibold">Código</th>
+              <th class="px-4 py-3 font-semibold">Banco</th>
+              <th class="px-4 py-3 font-semibold hidden md:table-cell">RIF</th>
+              <th class="px-4 py-3 font-semibold hidden lg:table-cell">Logo</th>
+              <th class="px-4 py-3 font-semibold hidden sm:table-cell"></th>
+            </tr>
+          </thead>
+          <tbody id="banks-tbody">
+            <tr>
+              <td colspan="5" class="px-4 py-8 text-center text-slate-500">Cargando bancos...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Uso -->
+    <section id="uso" class="py-20 reveal">
+      <h2 class="text-3xl font-bold text-white mb-3">Uso rápido</h2>
+      <p class="text-slate-400 mb-8">Copia y pega en tu proyecto.</p>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-2.5 bg-slate-800 border-b border-slate-700">
+            <span class="text-sm font-medium text-slate-300">JavaScript</span>
+            <button data-copy="code-js" class="copy-btn text-xs text-slate-400 hover:text-white transition">Copiar</button>
+          </div>
+          <pre class="code-block !m-0 !rounded-none !bg-slate-900"><code id="code-js" class="language-javascript">import bancos from './bancos.json';
+
+// Buscar por código
+const banco = bancos.find(b => b.codigo === '0102');
+
+// Ruta del logo
+const logo = `./images/${banco.filename}`;</code></pre>
+        </div>
+        <div class="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-2.5 bg-slate-800 border-b border-slate-700">
+            <span class="text-sm font-medium text-slate-300">Python</span>
+            <button data-copy="code-py" class="copy-btn text-xs text-slate-400 hover:text-white transition">Copiar</button>
+          </div>
+          <pre class="code-block !m-0 !rounded-none !bg-slate-900"><code id="code-py" class="language-python">import json
+
+with open('bancos.json') as f:
+    bancos = json.load(f)
+
+banco = next(b for b in bancos if b['codigo'] == '0102')
+logo = f"images/{banco['filename']}"</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Colabora -->
+    <section id="colabora" class="py-20 reveal">
+      <div class="bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700 rounded-2xl p-8 sm:p-12">
+        <h2 class="text-3xl font-bold text-white mb-4">¿Colaboras?</h2>
+        <p class="text-slate-300 mb-6 max-w-2xl">
+          Proyecto de apoyo abierto a mejoras. Los logos actuales son un punto de partida —
+          cualquier aporte que mejore la calidad o consistencia ayuda a quienes lo usan.
+        </p>
+        <ul class="grid sm:grid-cols-2 gap-4 mb-8">
+          <li class="flex items-start gap-3 text-slate-300 text-sm">
+            <span class="text-blue-400 mt-0.5">✦</span>
+            <span><strong class="text-white">Iconos de mejor calidad</strong> — más nítidos o con fondo transparente</span>
+          </li>
+          <li class="flex items-start gap-3 text-slate-300 text-sm">
+            <span class="text-blue-400 mt-0.5">✦</span>
+            <span><strong class="text-white">Formato 512×512 px</strong> — tamaño uniforme para apps y web</span>
+          </li>
+          <li class="flex items-start gap-3 text-slate-300 text-sm">
+            <span class="text-blue-400 mt-0.5">✦</span>
+            <span><strong class="text-white">Versiones vectorizadas</strong> — SVG para escalado sin pérdida</span>
+          </li>
+          <li class="flex items-start gap-3 text-slate-300 text-sm">
+            <span class="text-blue-400 mt-0.5">✦</span>
+            <span><strong class="text-white">Ideas y sugerencias</strong> — alias, nuevos campos, normalización</span>
+          </li>
+        </ul>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-medium transition"
+          >
+            Contribuir en GitHub
+          </a>
+          <a
+            href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-medium transition"
+          >
+            ★ Deja una estrella
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mantener actualizado -->
+    <section id="actualizado" class="py-20 reveal">
+      <div class="bg-slate-800/40 border border-amber-500/20 rounded-2xl p-8 sm:p-12">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+          <div class="max-w-2xl">
+            <p class="text-amber-400 text-sm font-medium mb-2">Comunidad</p>
+            <h2 class="text-3xl font-bold text-white mb-4">Ayúdanos a mantenerlo actualizado</h2>
+            <p class="text-slate-300 mb-4">
+              El sector bancario cambia: nuevos bancos, códigos, fusiones o logos. Si detectas datos
+              desactualizados o tienes información más reciente, <strong class="text-white">tu apoyo es clave</strong>
+              para que este recurso siga siendo confiable.
+            </p>
+            <p class="text-slate-400 text-sm mb-6">
+              Última actualización del catálogo: <span data-last-updated class="text-slate-200 font-medium">…</span>
+            </p>
+            <ul class="space-y-3 text-slate-300 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="text-amber-400 mt-0.5">→</span>
+                <span><strong class="text-white">Abre un issue</strong> si encuentras un código, RIF o logo incorrecto</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-amber-400 mt-0.5">→</span>
+                <span><strong class="text-white">Envía un pull request</strong> con correcciones o bancos nuevos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-amber-400 mt-0.5">→</span>
+                <span><strong class="text-white">Reporta cambios</strong> oficiales del sector bancario venezolano</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-amber-400 mt-0.5">→</span>
+                <span><strong class="text-white">Comparte el repo</strong> con desarrolladores que lo necesiten</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3 shrink-0">
+            <a
+              href="https://github.com/Alfonzzoj/bancos-venezuela-codigos/issues"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-5 py-3 rounded-xl font-semibold transition"
+            >
+              Reportar un cambio
+            </a>
+            <a
+              href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition"
+            >
+              Contribuir en GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 mt-10 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <p class="text-sm text-slate-400">
+            27 bancos · códigos bancarios · RIF · logos
+          </p>
+          <p class="text-xs text-slate-500 mt-1">
+            Actualizado el <span data-last-updated>…</span>
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 text-sm">
+          <a
+            href="https://github.com/Alfonzzoj/bancos-venezuela-codigos"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition"
+          >
+            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Ver repositorio
+          </a>
+          <span class="hidden sm:block text-slate-700">·</span>
+          <p class="text-slate-500">
+            Hecho por
+            <a
+              href="https://github.com/Alfonzzoj"
+              target="_blank"
+              rel="noopener"
+              class="text-slate-300 hover:text-white font-medium transition ml-1"
+            >@Alfonzzoj</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

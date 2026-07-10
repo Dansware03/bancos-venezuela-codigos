@@ -4,12 +4,21 @@ Catálogo de **bancos de Venezuela** con **códigos bancarios**, RIF y logos en 
 
 Recurso de apoyo para integrar fácilmente en otros proyectos: apps de pagos, P2P, transferencias, validadores de cuentas y fintech venezolana.
 
+**Última actualización:** 10 de julio de 2026 *(ver también `web/json/meta.json`)*
+
 ## Estructura
 
 ```
 .
 ├── bancos.json      # Datos de cada banco
-└── images/          # Logos en PNG
+├── images/          # Logos en PNG
+└── web/             # Sitio estático (GitHub Pages)
+    ├── index.html
+    ├── json/
+    │   └── meta.json    # Fecha de última actualización
+    ├── css/
+    ├── js/
+    └── assets/
 ```
 
 ## Campos del JSON
@@ -88,7 +97,19 @@ Los logos actuales son un punto de partida. Cualquier aporte que mejore la calid
 
 Si este recurso te resulta útil, **deja una estrella** en el repositorio — ayuda a que más desarrolladores lo encuentren.
 
+## Ayúdanos a mantenerlo actualizado
+
+El sector bancario cambia: nuevos bancos, códigos, fusiones o logos. Si detectas datos desactualizados o tienes información más reciente, **tu apoyo es clave** para que este recurso siga siendo confiable.
+
+Puedes ayudar de estas formas:
+
+- **Abrir un issue** si encuentras un código, RIF o logo incorrecto
+- **Enviar un pull request** con correcciones o bancos nuevos
+- **Reportar cambios** oficiales del sector bancario venezolano
+- **Compartir el repositorio** con otros desarrolladores que lo necesiten
+
+Cada contribución — por pequeña que sea — ayuda a mantener el catálogo al día para toda la comunidad.
 
 ---
 
-*27 bancos · códigos bancarios · RIF · logos · uso libre en proyectos de apoyo*
+*27 bancos · códigos bancarios · RIF · logos · uso libre en proyectos de apoyo · actualizado el 10 de julio de 2026*
