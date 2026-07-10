@@ -88,36 +88,6 @@ Los logos actuales son un punto de partida. Cualquier aporte que mejore la calid
 
 Si este recurso te resulta útil, **deja una estrella** en el repositorio — ayuda a que más desarrolladores lo encuentren.
 
-## Topics para GitHub
-
-Copia y pega estas etiquetas en **Settings → General → Topics** del repositorio:
-
-```
-venezuela
-bancos-venezuela
-venezuelan-banks
-codigos-bancarios
-bank-codes
-rif
-json
-dataset
-open-data
-bank-logos
-logos
-fintech
-payments
-pago-movil
-transferencias
-developer-resources
-venezuela-fintech
-financial-data
-banks
-resources
-```
-
-**Descripción sugerida (About):**
-
-> Códigos, RIF y logos de bancos de Venezuela en JSON. Recurso para apps de pagos, pago móvil, transferencias y validación de cuentas.
 
 ---
 
