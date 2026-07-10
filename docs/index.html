@@ -136,6 +136,7 @@
             Catálogo de <strong class="text-white">bancos de Venezuela</strong> con
             <strong class="text-white">códigos bancarios</strong>, RIF y logos en JSON.
             Códigos de 4 dígitos para transferencias, <strong class="text-white">pago móvil</strong> y validación de cuentas.
+            Disponible en <strong class="text-white">JSON</strong> y <strong class="text-white">CSV</strong>.
           </p>
           <p class="text-slate-400 mb-8">
             Recurso de apoyo para apps de pagos, P2P, transferencias, validadores y fintech venezolana.
@@ -198,18 +199,23 @@
     <section id="estructura" class="py-20 reveal">
       <h2 class="text-3xl font-bold text-white mb-3">Estructura del proyecto</h2>
       <p class="text-slate-400 mb-8">Todo lo que necesitas en un solo repositorio.</p>
-      <div class="grid sm:grid-cols-2 gap-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
           <p class="font-mono text-blue-400 text-sm mb-2">bancos.json</p>
-          <p class="text-slate-300 text-sm">Datos de cada banco: código, nombre, RIF y archivo de logo.</p>
+          <p class="text-slate-300 text-sm">Datos completos: código, nombre, RIF y archivo de logo.</p>
         </div>
         <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
+          <p class="font-mono text-blue-400 text-sm mb-2">bancos.csv</p>
+          <p class="text-slate-300 text-sm">Listado en CSV con <code class="text-yellow-300/80">Código</code> y <code class="text-yellow-300/80">Nombre</code>.</p>
+        </div>
+        <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5 sm:col-span-2 lg:col-span-1">
           <p class="font-mono text-blue-400 text-sm mb-2">images/</p>
           <p class="text-slate-300 text-sm">Logos en PNG asociados por el campo <code class="text-yellow-300/80">filename</code>.</p>
         </div>
       </div>
       <pre class="mt-6 bg-slate-800/80 border border-slate-700 rounded-xl p-5 text-sm font-mono text-slate-300 overflow-x-auto"><code>.
 ├── bancos.json
+├── bancos.csv
 ├── images/
 │   ├── bdv.png
 │   ├── banesco.png

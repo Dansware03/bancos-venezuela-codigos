@@ -1,6 +1,6 @@
 # Venezuelan Banks · Bancos de Venezuela 🇻🇪
 
-Catálogo de **bancos de Venezuela** con **códigos bancarios**, RIF y logos en JSON. Incluye los códigos de 4 dígitos usados en transferencias, **pago móvil** y validación de cuentas.
+Catálogo de **bancos de Venezuela** con **códigos bancarios**, RIF y logos en JSON. Incluye los códigos de 4 dígitos usados en transferencias, **pago móvil** y validación de cuentas. También disponible en **CSV** (`bancos.csv`) con código y nombre.
 
 Recurso de apoyo para integrar fácilmente en otros proyectos: apps de pagos, P2P, transferencias, validadores de cuentas y fintech venezolana.
 
@@ -11,6 +11,7 @@ Recurso de apoyo para integrar fácilmente en otros proyectos: apps de pagos, P2
 ```
 .
 ├── bancos.json      # Datos de cada banco
+├── bancos.csv       # Código y nombre (formato CSV)
 ├── images/          # Logos en PNG
 └── docs/            # Sitio estático (GitHub Pages)
     ├── index.html
