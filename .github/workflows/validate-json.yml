@@ -1,0 +1,47 @@
+name: Validar Catálogo de Bancos
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validar Sintaxis e Integridad JSON
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validar bancos.json y bancos.min.json
+        run: |
+          node -e '
+            const fs = require("fs");
+            const bancos = JSON.parse(fs.readFileSync("./bancos.json", "utf8"));
+            const bancosMin = JSON.parse(fs.readFileSync("./bancos.min.json", "utf8"));
+            
+            console.log(`Bancos en bancos.json: ${bancos.length}`);
+            console.log(`Bancos en bancos.min.json: ${bancosMin.length}`);
+            
+            if (bancos.length !== 27 || bancosMin.length !== 27) {
+              console.error("Error: Se esperaban 27 bancos en el catalogo.");
+              process.exit(1);
+            }
+            
+            bancos.forEach((b) => {
+              if (!b.codigo || !b.nombre || !b.nombre_corto || !b.rif || !b.filename) {
+                console.error(`Error en banco ${b.codigo}: faltan campos requeridos.`);
+                process.exit(1);
+              }
+              if (!fs.existsSync(`./images/${b.filename}`)) {
+                console.warn(`Advertencia: Logo images/${b.filename} no encontrado.`);
+              }
+            });
+            console.log("Validación completada con éxito.");
+          '
