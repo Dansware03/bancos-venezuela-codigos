@@ -188,9 +188,9 @@
   },
   {
     "codigo": "0169",
-    "nombre": "Mi Banco, Banco Microfinanciero, C.A.",
-    "nombre_corto": "Mi Banco",
-    "alias": "Mi Banco",
+    "nombre": "R4 Banco Microfinanciero, C.A.",
+    "nombre_corto": "R4 Banco Microfinanciero",
+    "alias": "R4 Banco (Mi Banco)",
     "rif": "J315941023",
     "color": "#0083ca",
     "pago_movil": true,
@@ -242,10 +242,10 @@
     "filename": "banplus.png"
   },
   {
-    "codigo": "0007",
+    "codigo": "0175",
     "nombre": "Banco Digital de Los Trabajadores, Banco Universal, C.A.",
     "nombre_corto": "Banco Digital de los Trabajadores",
-    "alias": "BDT",
+    "alias": "BDT (Bicentenario)",
     "rif": "G200091487",
     "color": "#004b87",
     "pago_movil": true,
