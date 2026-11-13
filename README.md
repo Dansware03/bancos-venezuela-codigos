@@ -1,6 +1,6 @@
 # Bancos de Venezuela — API y Catálogo Open Source 🇻🇪
 
-API y catálogo público de **bancos de Venezuela** con **códigos bancarios (Sudeban)**, nombres oficiales, nombres cortos, RIF, colores institucionales y logotipos en PNG/SVG. 
+API y catálogo público de **bancos de Venezuela** con **códigos bancarios oficiales (Sudeban / BCV)**, nombres oficiales, nombres cortos, RIF, colores institucionales y logotipos en PNG/SVG. 
 
 Diseñado para ser consumido como **API gratuita de alta velocidad y 0 costo** a través de CDN global (jsDelivr), ideal para aplicaciones web, fintech, apps móviles y proyectos desplegados en **Vercel**, **Netlify**, **Cloudflare** o servidores propios.
 
@@ -38,10 +38,10 @@ Cada objeto bancario contiene información detallada para adaptarse tanto a trá
 
 ```typescript
 export interface BancoVenezuela {
-  codigo: string;        // Código de 4 dígitos Sudeban (ej. "0102")
+  codigo: string;        // Código de 4 dígitos Sudeban (ej. "0102", "0175")
   nombre: string;        // Razón social legal completa (ej. "Banco de Venezuela, S.A. Banco Universal")
   nombre_corto: string;  // Nombre amigable para UI/Selects (ej. "Banco de Venezuela")
-  alias: string;         // Siglas o nombre común (ej. "BDV")
+  alias: string;         // Siglas o nombre común (ej. "BDV", "BDT")
   rif: string;           // RIF institucional (ej. "G200099976")
   color: string;         // Color primario de marca en Hex (ej. "#003882")
   pago_movil: boolean;   // Si está habilitado para Pago Móvil interbancario
@@ -90,7 +90,9 @@ export function SelectorBancos({ bancos, onSelect }) {
 
 ---
 
-## 🏦 Catálogo de Bancos Venezolanos (27 Entidades)
+## 🏦 Catálogo Auditado de Bancos Venezolanos (27 Entidades)
+
+Todos los códigos han sido auditados y cotejados contra las resoluciones oficiales de la **SUDEBAN** y el **Banco Central de Venezuela (BCV)**:
 
 | Código | Nombre Corto | Razón Social Completa | Alias | RIF | Color | Pago Móvil |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
@@ -111,12 +113,12 @@ export function SelectorBancos({ bancos, onSelect }) {
 | **0163** | Banco del Tesoro | Banco del Tesoro, C.A. Banco Universal | `Tesoro` | G200051876 | `#800020` | ✅ |
 | **0166** | Banco Agrícola | Banco Agrícola de Venezuela, C.A. Banco Universal | `BAV` | G200057955 | `#2e7d32` | ✅ |
 | **0168** | Bancrecer | Bancrecer, S.A. Banco Microfinanciero | `Bancrecer` | J316374173 | `#006837` | ✅ |
-| **0169** | Mi Banco | Mi Banco, Banco Microfinanciero, C.A. | `Mi Banco` | J315941023 | `#0083ca` | ✅ |
+| **0169** | R4 Banco Microfinanciero | R4 Banco Microfinanciero, C.A. | `R4 Banco (Mi Banco)` | J315941023 | `#0083ca` | ✅ |
 | **0171** | Banco Activo | Banco Activo, Banco Universal | `Activo` | J080066227 | `#0072bc` | ✅ |
 | **0172** | Bancamiga | Bancamiga, Banco Universal C.A. | `Bancamiga` | J316287599 | `#00a859` | ✅ |
 | **0173** | Banco Int. de Desarrollo | Banco Internacional de Desarrollo, C.A. Banco Universal | `BID` | J294640109 | `#003366` | ❌ |
 | **0174** | Banplus | Banplus Banco Universal, C.A | `Banplus` | J000423032 | `#e4002b` | ✅ |
-| **0007** | Banco Digital de los Trabajadores | Banco Digital de Los Trabajadores, Banco Universal, C.A. | `BDT` | G200091487 | `#004b87` | ✅ |
+| **0175** | Banco Digital de los Trabajadores | Banco Digital de Los Trabajadores, Banco Universal, C.A. | `BDT (Bicentenario)` | G200091487 | `#004b87` | ✅ |
 | **0177** | BANFANB | Banco de la Fuerza Armada Nacional Bolivariana, B.U. | `BANFANB` | G200106573 | `#2d4a22` | ✅ |
 | **0178** | N58 Banco Digital | N58 Banco Digital, S.A. Banco Microfinanciero S.A. | `N58` | J503581107 | `#5b2c6f` | ✅ |
 | **0191** | Banco Nacional de Crédito | Banco Nacional de Crédito, C.A. Banco Universal | `BNC` | J309841327 | `#004080` | ✅ |
